@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="hello.css" />
+</head>
+
+<body>
+
+    <p>Hello world!</p>
+
+    <p class="c01">
+        A well-formed Observable can emit as many values as it needs via `next` method,
+        but `complete` and `error` methods can be called only once and nothing else can be called
+        thereafter. If you try to invoke `next`, `complete` or `error` methods after created
+        Observable already completed or ended with an error, these calls will be ignored to
+        preserve so called *Observable Contract*. Note that you are not required to call
+        `complete` at any point - it is perfectly fine to create an Observable that never ends,
+        depending on your needs.
+    </p>
+
+    <p class="c02"> `onSubscription` can optionally return either a function or an object with
+        `unsubscribe` method. In both cases function or method will be called when
+        subscription to Observable is being cancelled and should be used to clean up all
+        resources. So, for example, if you are using `setTimeout` in your custom
+        Observable, when someone unsubscribes, you can clear planned timeout, so that
+        it does not fire needlessly and browser (or other environment) does not waste
+        computing power on timing event that no one will listen to anyways.
+    </p>
+
+    <p class="c03"> `onSubscription` can optionally return either a function or an object with
+        `unsubscribe` method. In both cases function or method will be called when
+        subscription to Observable is being cancelled and should be used to clean up all
+        resources. So, for example, if you are using `setTimeout` in your custom
+        Observable, when someone unsubscribes, you can clear planned timeout, so that
+        it does not fire needlessly and browser (or other environment) does not waste
+        computing power on timing event that no one will listen to anyways.
+    </p>
+
+
+    <ul class="ul-class">
+
+        <li>
+            In both cases function or method will be called.
+        </li>
+        <li>
+            In both cases function or method will be called.
+        </li>
+        <li>
+            In both cases function or method will be called.
+        </li>
+        <li>
+            In both cases function or method will be called.
+        </li>
+        <li>
+            In both cases function or method will be called.
+        </li>
+
+    </ul>
+
+</body>
+
+</html>
